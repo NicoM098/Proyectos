@@ -1,0 +1,35 @@
+Ejercicio Final: "Kiosco"
+
+- El 80% de los clientes vienen a comprar golosinas o bebidas, el resto viene a comprar
+comidas rapidas.
+
+- Si el ayudante esta ocupado y el dueño libre, el dueño pasa a ayudar a la cocina, 
+reduciendo los tiempos de preparacion en un 50% mientras el ayude.
+
+
+EVENTOS:
+
+- llegada_cliente		Exp.Neg(5')		X = -5 * LN(1 - RND)
+
+- fin_atencion_mostrador	U(0.5', 2')		X = 0.5 + RND * (2 - 0.5)
+
+- fin_solicitud_comida		cte = 6"
+
+- fin_preparacion_comida(i)	U(5', 10')		X = 5 + RND * (10 - 5)
+	i = 1,2,3,..,N
+
+OBJETOS:
+
+- Dueño		perm		{ Atendiendo Mostrador (AM) | Ayudando en Cocina (AC) | Libre }
+
+- Ayudante 	perm		{ Preparando Comida (PC) | Libre }
+
+- Cliente 	temp		{ Siendo Atendido Mostrador (SAM) | Esperando Atencion Mostrador (EA)
+				| Esperando Pedido (EP) }
+
+ESTADISTICAS:
+
+- Porc de tiempo ocioso del ayudante
+
+- Porc de tiempo que el dueño permanece en la cocina y en el mostrador
+	
