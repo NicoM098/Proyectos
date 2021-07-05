@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hangman_App.LevelsPage"
+             Visual="Material">
+
+    <StackLayout>
+        <Frame HeightRequest="60"
+               BackgroundColor="Black"
+               CornerRadius="0">
+            <Label
+                Text="NIVELES"
+                TextColor="White"
+                FontSize="24" FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Start"
+                Margin="10"/>
+        </Frame>
+
+        <Entry Placeholder="Nivel a agregar" 
+               x:Name="txtNivel"
+               Keyboard="Text"
+               Margin="10,20"/>
+
+        <Label
+                Text="*La dificultad todavia no está implementada"
+                TextColor="Gray"
+                FontSize="15" FontAttributes="Italic"
+                HorizontalTextAlignment="Start"
+                VerticalTextAlignment="Start"
+                Margin="10,10,10,0"/>
+
+        <Entry Placeholder="Dificultad" 
+               x:Name="txtDificultad"
+               Keyboard="Text"
+               Margin="10,5,10,10"/>
+
+        <Label
+                Text="Los niveles serán cargados automáticamente todos los viernes a las 12:00 hs"
+                TextColor="Black"
+                FontSize="15" FontAttributes="Italic"
+                HorizontalTextAlignment="Start"
+                VerticalTextAlignment="Start"
+                Margin="15"/>
+
+        <Button 
+                Margin="20,30,20,10" HorizontalOptions="Center" HeightRequest="70" WidthRequest="250"
+                Text="Confirmar"
+                FontSize="18"
+                CornerRadius="50"
+                
+                Clicked="btnConfirmar_Clicked"
+                
+                x:Name="btnConfirmar">
+        </Button>
+
+        
+    </StackLayout>
+    
+</ContentPage>
